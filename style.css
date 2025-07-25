@@ -1,15 +1,14 @@
 .gallery img {
   width: 100%;
-  padding: 16px;
-  background: #fefefe; /* マット紙っぽさ */
-  border: 12px solid #8B4513; /* 木のような色 */
+  padding: 14px;
+  background: #fffbe6;
+  border: 10px double #d4af37; /* 金のダブルボーダー */
   box-shadow:
-    0 0 0 4px #5c3317,     /* 内側の濃い縁取り */
-    0 6px 12px rgba(0,0,0,0.4); /* 外側の影で立体感 */
-  border-radius: 4px;
+    0 0 0 3px #bfa000,
+    0 8px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
   transition: 0.3s;
 }
 .gallery img:hover {
-  border-color: #A0522D;
+  border-color: #ffd700;
 }
-
