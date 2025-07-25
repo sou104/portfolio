@@ -1,12 +1,15 @@
 .gallery img {
   width: 100%;
-  padding: 12px; /* 額縁の内側スペース */
-  background-color: #fff; /* マット紙風 */
-  border: 8px solid #8B4513; /* 木製額縁の色 */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 16px;
+  background: #fefefe; /* マット紙っぽさ */
+  border: 12px solid #8B4513; /* 木のような色 */
+  box-shadow:
+    0 0 0 4px #5c3317,     /* 内側の濃い縁取り */
+    0 6px 12px rgba(0,0,0,0.4); /* 外側の影で立体感 */
   border-radius: 4px;
   transition: 0.3s;
 }
 .gallery img:hover {
-  border-color: #5A2E0C;
+  border-color: #A0522D;
 }
+
