@@ -7,28 +7,33 @@
     0 0 0 3px #bfa000,
     0 8px 15px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  overflow: hidden;
+  overflow: visible; /* はみ出し許可 */
   transition: 0.3s;
+  z-index: 0; /* レイヤー基準 */
 }
 
 .frame img {
   width: 100%;
   display: block;
   border-radius: 6px;
+  position: relative;
+  z-index: 1; /* 画像はスポットライトより上 */
 }
 
-/* スポットライト効果 */
+/* スポットライト効果：枠の外側に光を広げる */
 .frame::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 250%;
-  height: 250%;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.5) 100%);
+  width: 300%;    /* 枠の外側まで広げる */
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,224,0.6) 50%, transparent 90%);
   transform: translate(-50%, -50%);
-  z-index: 0;
+  z-index: 0;       /* 画像の下 */
   pointer-events: none;
   border-radius: inherit;
+  filter: blur(15px);  /* ぼかしでやわらかく */
 }
+
 
