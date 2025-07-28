@@ -7,11 +7,12 @@ body {
 }
 
 header {
-  background: #f2f2f2;
-  color: #333;
+  background: #2c2c2c;  /* ダークグレー */
+  color: #f0f0f0;       /* 明るめの文字色に変更 */
   padding: 2rem;
   text-align: center;
 }
+
 
 main {
   max-width: 1000px;
