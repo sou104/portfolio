@@ -37,4 +37,21 @@
   filter: blur(15px);  /* ぼかしでやわらかく */
 }
 
+/*横スクロール*/
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch; /* iOS対策 */
+}
+
+.frame {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 300px; /* 横幅を固定 */
+}
+
+
 
