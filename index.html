@@ -4,76 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Art Gallery</title>
-  <link rel="stylesheet" href="style.css?v=2">
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background: #f2f2f2;
-      color: #333;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    
-    
-    footer {
-      text-align: center;
-      color: #aaa;
-      margin: 4rem 0 1rem;
-    }
-  </style>
+  <!-- 自作CSS -->
+  <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
   <header>
     <h1>My Art Gallery</h1>
     <p>ようこそ、私の作品展へ</p>
   </header>
-  <main>
-    <section class="gallery">
-  <div class="frame"><img src="huriren1.jpg" alt="作品1"></div>
-  <div class="frame"><img src="mh.jpg" alt="作品2"></div>
-  <div class="frame"><img src="huriren2.jpg" alt="作品3"></div>
-</section>
 
+  <main>
+    <!-- Swiper スライダー -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="frame"><img src="huriren1.jpg" alt="作品1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frame"><img src="mh.jpg" alt="作品2"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frame"><img src="huriren2.jpg" alt="作品3"></div>
+        </div>
+      </div>
+
+      <!-- ナビゲーション -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- ページネーション -->
+      <div class="swiper-pagination"></div>
+    </div>
   </main>
+
   <footer>
     &copy; 2025 My Gallery
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper 初期化 -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    });
+  </script>
 </body>
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,                 // ループ有効
-    slidesPerView: 1,           // 1画面に1枚
-    spaceBetween: 20,           // スライド間の余白
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    autoplay: {
-      delay: 3000,              // 自動再生（ミリ秒）
-      disableOnInteraction: false
-    }
-  });
-</script>
 
