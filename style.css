@@ -1,3 +1,45 @@
+/* 基本スタイル */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  background: #f2f2f2;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  margin: 4rem 0 1rem;
+}
+
+/* Swiper 本体 */
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Swiper のスライド */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* フレームデザイン */
 .frame {
   position: relative;
   padding: 14px;
@@ -7,9 +49,10 @@
     0 0 0 3px #bfa000,
     0 8px 15px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  overflow: visible; /* はみ出し許可 */
+  overflow: visible;
   transition: 0.3s;
-  z-index: 1; /* レイヤー基準 */
+  z-index: 1;
+  width: 300px;
 }
 
 .frame img {
@@ -17,51 +60,23 @@
   display: block;
   border-radius: 6px;
   position: relative;
-  z-index: 1; /* 画像はスポットライトより上 */
+  z-index: 1;
 }
 
-/* スポットライト効果：枠の外側に光を広げる */
 .frame::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150%;    /* 枠の外側まで広げる */
+  width: 150%;
   height: 150%;
   background: radial-gradient(circle, rgba(255,255,160,0.7) 30%, transparent 80%);
-
   transform: translate(-50%, -50%);
-  z-index: 0;       /* 画像の下 */
+  z-index: 0;
   pointer-events: none;
   border-radius: inherit;
-  filter: blur(15px);  /* ぼかしでやわらかく */
+  filter: blur(15px);
 }
 
-/*横スクロール*/
-.gallery {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 1rem;
-  -webkit-overflow-scrolling: touch; /* iOS対策 */
-}
-
-.frame {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  width: 300px; /* 横幅を固定 */
-}
-
-.swiper-slide img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
-.swiper {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 
