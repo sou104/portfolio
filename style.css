@@ -28,11 +28,14 @@ footer {
 
 /* Swiper 本体 */
 .swiper {
+  position: relative; /* 重要 */
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem 0;
+  z-index: 1; /* headerより下にしたいなら小さめに */
 }
+
 
 /* Swiper のスライド */
 .swiper-slide {
