@@ -9,7 +9,7 @@
   border-radius: 6px;
   overflow: visible; /* はみ出し許可 */
   transition: 0.3s;
-  z-index: 0; /* レイヤー基準 */
+  z-index: 1; /* レイヤー基準 */
 }
 
 .frame img {
@@ -26,9 +26,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300%;    /* 枠の外側まで広げる */
-  height: 300%;
-  background: radial-gradient(circle, rgba(255,255,224,0.6) 50%, transparent 90%);
+  width: 150%;    /* 枠の外側まで広げる */
+  height: 150%;
+  background: radial-gradient(circle, rgba(255,255,160,0.7) 30%, transparent 80%);
+
   transform: translate(-50%, -50%);
   z-index: 0;       /* 画像の下 */
   pointer-events: none;
