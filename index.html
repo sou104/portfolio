@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Art Gallery</title>
   <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
 
   <style>
@@ -52,3 +54,26 @@
   </footer>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,                 // ループ有効
+    slidesPerView: 1,           // 1画面に1枚
+    spaceBetween: 20,           // スライド間の余白
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 3000,              // 自動再生（ミリ秒）
+      disableOnInteraction: false
+    }
+  });
+</script>
+
