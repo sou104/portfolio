@@ -11,22 +11,6 @@
   <link rel="stylesheet" href="style.css?v=1">
 </head>
 
-  <script>
-  const menuButton = document.querySelector('.menu-toggle');
-  const dropdown = document.querySelector('.dropdown-menu');
-
-  menuButton.addEventListener('click', () => {
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-  });
-
-  // メニュー外クリックで閉じる（オプション）
-  document.addEventListener('click', function (event) {
-    if (!dropdown.contains(event.target) && !menuButton.contains(event.target)) {
-      dropdown.style.display = 'none';
-    }
-  });
-</script>
-
 <body>
   <header>
   <div class="header-inner">
@@ -100,6 +84,21 @@
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
+      }
+    });
+  </script>
+  <!-- メニュー開閉用 JS -->
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const dropdown = document.querySelector('.dropdown-menu');
+
+    menuButton.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!dropdown.contains(event.target) && !menuButton.contains(event.target)) {
+        dropdown.style.display = 'none';
       }
     });
   </script>
