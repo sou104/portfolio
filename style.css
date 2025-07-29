@@ -142,6 +142,11 @@ footer {
   flex-wrap: wrap;
 }
 
+.logo {
+  text-align: center;
+  flex-grow: 1;
+}
+
 /* ロゴ＋サブテキスト */
 .logo h1 {
   margin: 0;
