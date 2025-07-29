@@ -82,6 +82,54 @@ footer {
   filter: blur(15px);
 }
 
+/* メニューボタン */
+.menu-toggle {
+  background-color: #444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #666;
+}
+
+/* ドロップダウンメニュー（初期は非表示） */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100px; /* ヘッダーの下に配置 */
+  right: 1rem;
+  background-color: #333;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffd700;
+  color: #222;
+}
+
 /* ヘッダー全体 */
 .header-inner {
   display: flex;
