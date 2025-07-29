@@ -99,6 +99,10 @@ footer {
   background-color: #666;
 }
 
+.menu-container {
+  position: relative; /* 基準点をこの要素に */
+}
+
 /* ドロップダウンメニュー（初期は非表示） */
 .dropdown-menu {
   display: none;
