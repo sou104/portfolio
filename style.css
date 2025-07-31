@@ -36,15 +36,32 @@ footer {
 }
 
 .swiper {
-  overflow: visible; /* スライドが少しはみ出せるように */
+  overflow: visible;/*少しスライドがはみ出るように*/
+  padding: 0 40px; /* ← 左右に余白をつけることで端が見える */
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .swiper-slide {
+    width: 240px; /* スマホで少し小さく */
+  }
+
+  .frame {
+    width: 240px;
+  }
 }
 
 
-/* Swiper のスライド */
+
+/* Swiper のスライド 
 .swiper-slide {
   display: flex;
   justify-content: center;
-}
+}*/
 
 /* フレームデザイン */
 .frame {
