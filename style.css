@@ -28,13 +28,15 @@ footer {
 }
 
 /* Swiper 本体 */
+.swiper-slide {
+  width: 300px;  /* 固定幅で扱う場合 */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .swiper {
-  position: relative; /* 重要 */
-  width: 100%;
-  max-width: 1000px; /* 300px × 3 + margin */
-  margin: 0 auto;
-  padding: 2rem 0;
-  z-index: 1; /* headerより下にしたいなら小さめに */
+  overflow: visible; /* スライドが少しはみ出せるように */
 }
 
 
