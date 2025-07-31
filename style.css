@@ -29,11 +29,12 @@ footer {
 
 /* Swiper 本体 */
 .swiper-slide {
-  width: 300px;  /* 固定幅で扱う場合 */
+  /* width: 300px;  削除またはコメントアウトしてみてください */
   flex-shrink: 0;
   display: flex;
   justify-content: center;
 }
+
 
 .swiper {
   overflow: visible;/*少しスライドがはみ出るように*/
